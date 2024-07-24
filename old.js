@@ -6,9 +6,9 @@
     }
 
     async publishMessage(routingKey, message){
-        // if(!this.channel){
-        //     this.channel = await this.createConnection("test-channel")
-        // }
+        if(!this.channel){
+            this.channel = await this.createConnection("test-channel")
+        }
 
         let channel = await this.createConnection("test-channel")
 
